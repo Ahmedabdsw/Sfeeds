@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:theme="@style/MyActionBarTheme"
+    android:layout_height="53dp"
+    android:id="@+id/actionb3"
+    android:background="@color/actionbar">
+    <android.support.v7.widget.AppCompatImageButton
+        android:layout_width="45dp"
+        app:srcCompat="@drawable/ic_action_return"
+        android:cropToPadding="true"
+        android:background="@color/actionbar"
+        android:layout_height="45dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitEnd"
+        android:layout_marginLeft="2dp"
+        android:id="@+id/close2"
+        />
+
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#70494949"
+        android:focusable="true"
+        android:id="@+id/srview"
+         android:searchIcon="@drawable/ic_search"
+        app:queryHint="بحث"/>
+
+</android.support.v7.widget.Toolbar>

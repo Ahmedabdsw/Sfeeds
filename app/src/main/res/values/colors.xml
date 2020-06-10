@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white" >#d7e3fa</color>
+    <color name="darkred">#ca2a2a</color>
+    <color name="orange">#f7182e</color>
+    <color name="actionbar">#07becf</color>
+    <color name="darkactionbar">#fffefe</color>
+    <color name="imageBorder">#4ca3ea</color>
+    <color name="trasparant">#2e07becf</color>
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:theme="@style/MyActionBarTheme"
+    android:layout_height="53dp"
+    android:id="@+id/actionb4"
+    android:background="@color/actionbar">
+    <android.support.v7.widget.AppCompatImageButton
+        android:layout_width="45dp"
+        app:srcCompat="@drawable/ic_action_return"
+        android:cropToPadding="true"
+        android:background="@color/actionbar"
+        android:layout_height="45dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitEnd"
+        android:layout_marginLeft="2dp"
+        android:id="@+id/close3" />
+    <TextView
+        android:text="@string/notificationTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/darkactionbar"
+        android:textStyle="bold"
+        android:textSize="21dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="7dp"/>
+
+
+</android.support.v7.widget.Toolbar>

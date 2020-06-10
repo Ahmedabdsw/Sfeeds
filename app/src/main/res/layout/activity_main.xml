@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layoutDirection="ltr"
+    tools:context="com.abderrahmane.ahmed.sfeeds.MainActivity">
+
+    <include layout="@layout/actionbar1"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    />
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-6781955195365912/9822911832"/>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/list1"
+        android:scrollbars="vertical"
+        android:textAlignment="viewStart"
+        android:background="@drawable/background"
+        android:gravity="start" />
+    <!-- #6064ee-->
+</LinearLayout>

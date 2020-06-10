@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.abderrahmane.ahmed.sfeeds">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission
+        android:name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:allowBackup="false"
+        android:debuggable="false"
+        android:icon="@drawable/rimnewslogo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="HardcodedDebugMode">
+        <activity
+            android:name="ahmed.abderrahmane.com.sfeeds.Main2Activity"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.SearchManager"
+                android:value=".searchActivity" />
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value=".SearchableActivity" />
+        </activity>
+        <activity
+            android:name=".WebActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PA bRENT_ACTIVITY"
+                android:value=".MainActivity" />
+            <meta-data
+                android:name="android.webkit.WebView.EnableSafeBrowsing"
+                android:value="false" />
+        </activity>
+        <activity
+            android:name=".PubActivity"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/nobar" />
+
+        <receiver
+            android:name=".UpdateNews"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="com.abderrahmane.ahmed.sfeeds.notif1" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".UpdateNews1"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="com.abderrahmane.ahmed.sfeeds.notif2" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".UpdateNews2"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="com.abderrahmane.ahmed.sfeeds.notif3" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".UpdateService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".searchActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".notificationsActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+    </application>
+
+</manifest>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">أهم الأخبار</string>
+    <string name="right">16dp</string>
+    <string name="data"></string>
+    <string name="facebook_app_id">299280670459514</string>
+    <string name="notificationTitle">آخر الأخبار</string>
+    <string-array name="rss"></string-array>
+    <string name="action_share">شارك</string>
+    <string name="action_reply">إعادة</string>
+    <string name="back">عودة</string>
+    <string name="title_activity_pub2">Pub2Activity</string>
+
+    <string name="action_settings">الضبط</string>
+
+    <string name="interstitial_ad_unit_id">ca-app-pub-6781955195365912/9822911832</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+</resources>

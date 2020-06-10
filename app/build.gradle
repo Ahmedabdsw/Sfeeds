@@ -1,0 +1,78 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'sfeeds'
+            keyPassword '07130909'
+            storeFile file('/home/ahmedabdsw1902/keys/sfeeds.jks')
+            storePassword '07130909'
+        }
+        config1 {
+            keyAlias 'sfeeds'
+            keyPassword '07130909'
+            storeFile file('/home/ahmedabdsw1902/keys/sfeeds.jks')
+            storePassword '07130909'
+        }
+    }
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "ahmed.abderrahmane.com.sfeeds"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 23
+        versionName "1.4.0"
+        signingConfig signingConfigs.config
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+            versionNameSuffix = '1.0.8'
+        }
+        debug {
+            signingConfig signingConfigs.config1
+            minifyEnabled false
+        }
+    }
+    lintOptions {
+
+        checkReleaseBuilds false
+
+    }
+    productFlavors {
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+    buildToolsVersion = '28.0.3'
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //noinspection GradleCompatible
+    //implementation 'com.android.support:appcompat-v7:29.0.0'
+    // implementation 'com.google.android.gms:play-services-ads:15.0.1'
+    // implementation 'com.google.firebase:firebase-ads:11.8.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.navigation:navigation-fragment:2.2.1'
+    implementation 'androidx.navigation:navigation-ui:2.2.1'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'com.android.support:design:29.+'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}
+
+apply plugin: 'com.google.gms.google-services'
+
+repositories {
+    google()
+    jcenter()
+}

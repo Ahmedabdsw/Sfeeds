@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_pub"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    tools:context="com.abderrahmane.ahmed.sfeeds.PubActivity"
+    android:weightSum="1"
+    android:orientation="vertical"
+    android:background="@color/darkactionbar">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="17dip"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="#feff88"
+        android:background="#207716"
+        android:text="Contactez nous: +222 للإتصال: 42072008"
+        android:layout_height="26sp"
+        android:layout_margin="2dp"/>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-6781955195365912/9822911832">
+    </com.google.android.gms.ads.AdView>
+
+    <GridView
+        android:numColumns="3"
+        android:layout_width="match_parent"
+        android:layout_margin="2dp"
+        android:weightSum="1"
+        android:id="@+id/gridview2"
+        android:horizontalSpacing="3dp"
+        android:verticalSpacing="6dp"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+    </GridView>
+
+    <GridView
+        android:numColumns="2"
+        android:layout_margin="2dp"
+        android:layout_width="match_parent"
+        android:weightSum="1"
+        android:id="@+id/gridview1"
+        android:horizontalSpacing="10dp"
+        android:verticalSpacing="10dp"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+    </GridView>
+
+</LinearLayout>
